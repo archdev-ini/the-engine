@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Github, CodeXml } from 'lucide-react';
+import { CodeXml } from 'lucide-react';
 import Link from 'next/link';
 
 const codeSnippet = `
@@ -69,12 +69,11 @@ export default function DevelopersPage() {
           Follow our progress and be the first to know when the SDK drops.
         </p>
         <div className="mt-6">
-          <Link href="https://github.com/archdev-ini" passHref>
-            <Button size="lg">
-              <Github className="mr-2 h-5 w-5" />
-              Star us on GitHub
+           <Button variant="secondary" asChild>
+              <Link href="https://github.com/archdev-ini">
+                Star on GitHub
+              </Link>
             </Button>
-          </Link>
         </div>
       </div>
     </div>

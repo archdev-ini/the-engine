@@ -14,7 +14,7 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">Open Protocol • XP-Based Identity • CC0 License</p>
           </div>
           <div className="flex space-x-4">
-            <Link href="https://github.com/archdev-ini" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="https://github.com/archdev-ini/the.engine" className="text-muted-foreground hover:text-primary transition-colors">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Link>
