@@ -66,9 +66,14 @@ export default function Header() {
             </Link>
 
           <div className="flex items-center gap-2">
-            <Button variant="secondary" asChild>
+            <Button variant="ghost" asChild>
               <Link href="mailto:dev@engine-os.app">
                 Contact
+              </Link>
+            </Button>
+             <Button asChild>
+              <Link href="https://github.com/archdev-ini">
+                Star on GitHub
               </Link>
             </Button>
           </div>

@@ -33,7 +33,7 @@ export default function DevelopersPage() {
     <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
       <div className="text-center max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl font-headline">
-          Built for Builders, Not Just Users
+          Built for Builders
         </h1>
         <p className="mt-4 text-muted-foreground md:text-lg">
           Create your own XP-based tools and DAOs, extend campaigns via smart contracts, and run community quests with role logic using our SDKs, API, and system templates.
@@ -48,7 +48,7 @@ export default function DevelopersPage() {
       </div>
 
       <div className="mt-12 max-w-4xl mx-auto">
-        <Card className="bg-black border-border/50">
+        <Card className="bg-secondary/50 border">
             <CardContent className="p-4">
                 <div className="flex justify-between items-center mb-2">
                     <div className="flex items-center gap-2">
@@ -56,7 +56,7 @@ export default function DevelopersPage() {
                         <span className="text-sm font-semibold text-muted-foreground">Smart Contracts & APIs</span>
                     </div>
                 </div>
-                <pre className="text-sm bg-black p-4 rounded-md overflow-x-auto text-white/80 font-code">
+                <pre className="text-sm bg-secondary p-4 rounded-md overflow-x-auto text-foreground/80 font-code">
                 <code>{codeSnippet.trim()}</code>
                 </pre>
             </CardContent>
