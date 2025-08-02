@@ -5,8 +5,8 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: 'the.Engine: Collective Action',
-  description: 'A new protocol for decentralized coordination and value creation.',
+  title: 'the.Engine: The Operating System for Collective Action',
+  description: 'A protocol for verifiable coordination, XP-based identity, and decentralized governance.',
 };
 
 export default function RootLayout({

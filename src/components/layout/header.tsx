@@ -4,8 +4,8 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Bot } from 'lucide-react';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/developers', label: 'Developers' },
+  { href: '/', label: 'Protocol' },
+  { href: '/developers', label: 'Builders' },
   { href: '/docs', label: 'Docs' },
 ];
 
@@ -66,8 +66,10 @@ export default function Header() {
             </Link>
 
           <div className="flex items-center gap-2">
-            <Button variant="secondary">
-              Join Waitlist
+            <Button variant="secondary" asChild>
+              <Link href="mailto:dev@engine-os.app">
+                Contact
+              </Link>
             </Button>
           </div>
         </div>

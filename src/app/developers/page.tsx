@@ -33,15 +33,17 @@ export default function DevelopersPage() {
     <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
       <div className="text-center max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl font-headline">
-          Build on the.Engine
+          Built for Builders, Not Just Users
         </h1>
         <p className="mt-4 text-muted-foreground md:text-lg">
-          Our Developer SDK is coming soon. Get ready to create powerful, decentralized applications for collective action.
+          Create your own XP-based tools and DAOs, extend campaigns via smart contracts, and run community quests with role logic using our SDKs, API, and system templates.
         </p>
         <div className="mt-6">
-          <span className="text-primary font-semibold py-1 px-3 rounded-full bg-primary/10 border border-primary/20">
-            Target Release: Q4 2025
-          </span>
+          <Link href="https://build.engine-os.app" passHref>
+            <Button size="lg">
+              Coming soon at build.engine-os.app
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -51,7 +53,7 @@ export default function DevelopersPage() {
                 <div className="flex justify-between items-center mb-2">
                     <div className="flex items-center gap-2">
                         <CodeXml className="h-5 w-5 text-primary" />
-                        <span className="text-sm font-semibold text-muted-foreground">API & Contract Preview</span>
+                        <span className="text-sm font-semibold text-muted-foreground">Smart Contracts & APIs</span>
                     </div>
                 </div>
                 <pre className="text-sm bg-black p-4 rounded-md overflow-x-auto text-white/80 font-code">
@@ -67,7 +69,7 @@ export default function DevelopersPage() {
           Follow our progress and be the first to know when the SDK drops.
         </p>
         <div className="mt-6">
-          <Link href="#" passHref>
+          <Link href="https://github.com/archdev-ini" passHref>
             <Button size="lg">
               <Github className="mr-2 h-5 w-5" />
               Star us on GitHub
