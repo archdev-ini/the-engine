@@ -70,7 +70,7 @@ export default function DevelopersPage() {
         </p>
         <div className="mt-6">
            <Button variant="secondary" asChild>
-              <Link href="https://github.com/archdev-ini">
+              <Link href="https://github.com/archdev-ini/the-engine">
                 Star on GitHub
               </Link>
             </Button>
