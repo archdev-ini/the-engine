@@ -1,8 +1,9 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, Briefcase, BrainCircuit, Users } from 'lucide-react';
+import { Mail, Briefcase, BrainCircuit, Users, Send } from 'lucide-react';
 import Link from 'next/link';
+import { Input } from '@/components/ui/input';
 
 const partners = [
     { name: 'Youth DAOs', description: 'coordinating school repairs', hint: 'logo community', icon: <Users/>},
@@ -45,6 +46,17 @@ export default function Ecosystem() {
                   <Briefcase className="mr-2 h-4 w-4" /> For Builders
                 </Button>
               </Link>
+            </div>
+             <div className="mt-8 border-t border-border/40 pt-6">
+                <h4 className="font-semibold font-headline">Stay Updated</h4>
+                <p className="text-muted-foreground text-sm mt-1">Get the latest news and updates from the.Engine team.</p>
+                <form className="mt-4 flex gap-2">
+                    <Input type="email" placeholder="Enter your email" className="max-w-xs bg-background" />
+                    <Button type="submit">
+                        <Send className="mr-2"/>
+                        Subscribe
+                    </Button>
+                </form>
             </div>
           </div>
         </div>
