@@ -2,11 +2,16 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Bot } from 'lucide-react';
+import { ModeToggle } from '../mode-toggle';
 
 const navLinks = [
-  { href: '/', label: 'Protocol' },
-  { href: '/developers', label: 'Builders' },
-  { href: '/docs', label: 'Docs' },
+  { href: '/', label: 'Home' },
+  { href: '/modules', label: 'Modules' },
+  { href: '/docs', label: 'Documentation' },
+  { href: '#', label: 'Live App' },
+  { href: '#', label: 'Governance' },
+  { href: '#', label: 'Blog' },
+  { href: '#', label: 'FAQ' },
 ];
 
 export default function Header() {
@@ -16,12 +21,14 @@ export default function Header() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Bot className="h-6 w-6 text-primary" />
-            <span className="hidden font-bold sm:inline-block font-headline">the.Engine</span>
+            <span className="hidden font-bold sm:inline-block font-headline">
+              the.Engine
+            </span>
           </Link>
           <nav className="flex items-center gap-6 text-sm">
             {navLinks.map((link) => (
               <Link
-                key={link.href}
+                key={link.href + link.label}
                 href={link.href}
                 className="transition-colors hover:text-foreground/80 text-foreground/60"
               >
@@ -32,50 +39,47 @@ export default function Header() {
         </div>
 
         <div className="flex flex-1 items-center justify-between md:justify-end">
-            <div className="md:hidden">
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="mr-2">
-                    <Menu className="h-5 w-5" />
-                    <span className="sr-only">Toggle Menu</span>
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="left" className="pr-0">
-                   <Link href="/" className="mr-6 flex items-center space-x-2 mb-6">
-                    <Bot className="h-6 w-6 text-primary" />
-                    <span className="font-bold font-headline">the.Engine</span>
-                  </Link>
-                  <nav className="flex flex-col gap-4">
-                    {navLinks.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className="transition-colors hover:text-foreground/80 text-foreground/60 text-lg"
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </nav>
-                </SheetContent>
-              </Sheet>
-            </div>
-            
-             <Link href="/" className="flex items-center space-x-2 md:hidden">
-                <Bot className="h-6 w-6 text-primary" />
-                <span className="font-bold font-headline">the.Engine</span>
-            </Link>
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="mr-2">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="pr-0">
+                <Link
+                  href="/"
+                  className="mr-6 flex items-center space-x-2 mb-6"
+                >
+                  <Bot className="h-6 w-6 text-primary" />
+                  <span className="font-bold font-headline">the.Engine</span>
+                </Link>
+                <nav className="flex flex-col gap-4">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href + link.label}
+                      href={link.href}
+                      className="transition-colors hover:text-foreground/80 text-foreground/60 text-lg"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
+
+          <Link href="/" className="flex items-center space-x-2 md:hidden">
+            <Bot className="h-6 w-6 text-primary" />
+            <span className="font-bold font-headline">the.Engine</span>
+          </Link>
 
           <div className="flex items-center gap-2">
             <Button variant="ghost" asChild>
-              <Link href="mailto:dev@engine-os.app">
-                Contact
-              </Link>
+              <Link href="mailto:dev@engine-os.app">Contact</Link>
             </Button>
-             <Button asChild>
-              <Link href="https://github.com/archdev-ini/the-engine">
-                Star on GitHub
-              </Link>
-            </Button>
+            <ModeToggle />
           </div>
         </div>
       </div>
