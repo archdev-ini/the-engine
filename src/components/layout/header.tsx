@@ -8,10 +8,10 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/modules', label: 'Modules' },
   { href: '/docs', label: 'Documentation' },
-  { href: '#', label: 'Live App' },
-  { href: '#', label: 'Governance' },
-  { href: '#', label: 'Blog' },
-  { href: '#', label: 'FAQ' },
+  { href: '/live-app', label: 'Live App' },
+  { href: '/governance', label: 'Governance' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/faq', label: 'FAQ' },
 ];
 
 export default function Header() {
